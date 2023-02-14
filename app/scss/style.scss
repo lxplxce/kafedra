@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html,
 body {
     margin: 0;
@@ -78,3 +79,62 @@ body{
     flex: 0 0 auto;
     background-color: blue;
 }
+=======
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.page-header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 147px;
+    background-color: green;
+   &__logo{
+	flex-shrink: 0;
+    width: 202px;
+    height:  147px;
+    text-decoration: none;
+    font-size: 0;
+   }
+   &__logo-icon{
+	width: 100%;
+    height: 100%;
+   }
+   &__nav{
+	display: flex;
+    align-items: baseline;
+    margin: 0 auto;
+   }
+   &__nav-link{
+	margin: 0 25px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #1F1E1E;
+    text-decoration: none;
+    transition: color 0.2s;
+	&:hover{
+		color: #BC3324;
+	}
+	&:active{
+		color: #BC3324;
+	}
+   }
+   &__container{
+	box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0px 40px 0px 40px;
+   }
+}
+
+
+
+>>>>>>> 8c4ad0f40b73fbd15d2830862515c2bf87469f08
