@@ -7,3 +7,17 @@
 @import "./mixins/tabs";
 @import "./mixins/disable-mob-hover";
 @import "./mixins/layout";
+
+
+.page-header{
+&__container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1414px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+}

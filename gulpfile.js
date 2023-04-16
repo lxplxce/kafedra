@@ -69,9 +69,8 @@ const svgSprites = () => {
     .pipe(
       cheerio({
         run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
+          // $('[stroke]').removeAttr('stroke');
+          // $('[style]').removeAttr('style');
         },
         parserOptions: {
           xmlMode: true
@@ -267,8 +266,8 @@ const watchFiles = () => {
 
 const cache = () => {
   return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2}`, {
-      base: buildFolder
-    })
+    base: buildFolder
+  })
     .pipe(rev())
     .pipe(revDel())
     .pipe(dest(buildFolder))

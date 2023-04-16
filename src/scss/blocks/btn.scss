@@ -1,0 +1,27 @@
+@import "../global/_vars";
+@import "../global/_fonts";
+@import "../global/settings";
+
+.btn {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  padding: 15px 40px;
+  border: solid 1px $black;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $black;
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  transition: color 0.2s, background-color 0.2s;
+  &:hover,
+  &:active{
+      color: white;
+      background-color: $black;
+  }
+}
+

@@ -1,0 +1,129 @@
+@import "../global/_vars";
+@import "../global/_fonts";
+@import "../global/settings";
+
+.blog-card{
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  position: relative;
+  &:hover{
+    .blog-card__picture{
+      box-shadow: 0 0 30px $black;
+      transition: all 0.5s ease;
+    }
+  }
+  &__link{
+    flex-shrink: 0;
+    align-self: flex-start;
+    display: block;
+    width: 467px;
+    margin-right: 60px;
+    font-size: 0;
+    text-decoration: none;
+  }
+  &__picture{
+    display: block;
+    position: relative;
+    width: 100%;
+    transition-duration: 1s;
+    transition-property: box-shadow, background-color;
+
+    &::after{
+      content: '';
+      display: block;
+      padding-top: 62%;
+      width: 100%;
+    }
+  }
+  &__img{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__info{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding: 30px 0;
+    padding-right: 150px;
+  }
+  &__info-time{
+    // margin: 0 0 40px;
+    font-weight: 300;
+    font-size: $font_size;
+    color: $black;
+    line-height: 22px;
+  }
+  &__title{
+    margin: 0;
+    padding-bottom: 30px;
+    font-weight: 700;
+    color: $black;
+    font-size: 24px;
+    line-height: 33px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: color 0.2s, text-decoration-color 0.2s;
+  }
+  &__title-link{
+    max-width: 467px;
+    margin: auto 0 40px;
+    color: $black;
+    text-decoration-color: transparent;
+    transition: color 0.2s, text-decoration-color 0.2s;
+    &:hover,
+    &:active{
+      .blog-card__title,
+      .blog-card__icon{
+        color: $red_dark;
+      }
+      .blog-card__title{
+        text-decoration-color:$red_dark;
+      }
+    }
+  }
+  &__icon{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    transition:color 0.2s;
+    display: block;
+    color: $black;
+    transition: none;
+  }
+  &__text{
+    max-width: 467px;
+    margin: 0;
+    font-family: $font1;
+    font-weight: 400;
+    font-size: $font_size;
+    color: $black;
+    line-height: 1.3;
+  }
+  & + .blog-card {
+    margin-top: 120px;
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      margin: 0 auto 60px;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 1254px;
+      height: 1px;
+      background-color: $black;
+      pointer-events: none;
+    }
+  }
+}

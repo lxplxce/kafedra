@@ -7,14 +7,30 @@
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-  // colors
   --light-color: #fff;
 }
-$hover-text: #A51505;
-
-$default:#1F1E1E;
 
 %default-font{
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
+
+//main colors
+$black:#1F1E1E;
+$black_80: #BFBFBF;
+
+$red: #bc3324;
+$red_dark: #A51505;
+
+$bg_color:#DEDEDE;
+
+
+//fonts
+$font:'Roboto', sans-serif;
+$font1:'Open Sans', sans-serif;
+$font2:'Lora', serif;
+$font3:'mak', serif;
+
+
+$font_size:16px;
+$font_size_s:12.8px;
