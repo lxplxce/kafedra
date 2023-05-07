@@ -12,28 +12,38 @@
 
 
 @import "./blocks/btn.scss";
-@import "./blocks/section-title.scss";
 
 @import "./blocks/event-card.scss";
+@import "./blocks/field.scss";
+@import "./blocks/form.scss";
+@import "./blocks/lenni-main.scss";
+@import "./blocks/millennials.scss";
+
+@import "./blocks/radio";
+@import "./blocks/check.scss";
+@import "./blocks/ok.scss";
+@import "./blocks/pp.scss";
+
+@import "./blocks/table.scss";
 
 @import "./blocks/blog-card.scss";
 @import "./blocks/listing.scss";
 @import "./blocks/reserve.scss";
+@import "./blocks/content.scss";
+@import "./blocks/article.scss";
 
 @import "./blocks/event.scss";
 @import "./blocks/events.scss";
 
+
 @import "./blocks/header";
 @import "./blocks/footer";
 
-.site-container{
-  width: 1334px;
-  margin: 0 auto;
-}
 
 .listing__events-cards{
     display: flex;
     flex-wrap: wrap;
     margin: 0 -30px;
 }
+
 

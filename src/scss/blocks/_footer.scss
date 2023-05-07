@@ -1,0 +1,105 @@
+@import "../global/_vars";
+@import "../global/_fonts";
+@import "../global/settings";
+@import "../mixins";
+
+.footer{
+  &__content{
+    width: 100%;
+    padding: 100px 0 73px;
+    justify-content: center;
+  }
+  &__container{
+    max-width: 1334px;
+    margin: 0 auto;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__links{
+    display: flex;
+    flex-direction: column;
+  }
+  &__link{
+    padding-bottom: 22px;
+    text-decoration: none;
+    transition: color 0.2s;
+    &:hover{
+      color:$red_dark;
+      }
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+  &__feedback{
+    width: 410px;
+  }
+  &__follow{
+    margin-top: 24px;
+    margin-bottom: 15px;
+    display: flex;
+  }
+  &__btn{
+    width: 135px;
+    color: white;
+    background-color: $black;
+    border: solid 1px $black;
+    &:hover,
+    &:active{
+      color: white;
+      background-color: #141414;
+      border: solid 1px #141414;
+    }
+  }
+  &__input{
+    border-radius: 0;
+  }
+  &__txt{
+    font-family: $font1;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #111111;
+  }
+  &__border{
+    display: flex;
+    padding-bottom: 60px;
+    &::before,
+    &::after{
+      content: '';
+      flex-grow: 1;
+      width: 2px;
+      height: 2px;
+    }
+    &::before{
+      margin-right: 50px;
+      background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
+    }
+    &::after{
+      margin-left: 50px;
+      background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%)
+    }
+  }
+
+  &__check{
+    padding-left: 40px;
+    font-size: 14px;
+    align-items: normal;
+  }
+  &__bottom-right{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  &__bottom{
+    display: flex;
+
+  }
+  &__tagree-img{
+    margin-left: 15px;
+  }
+  &__cookies{
+    padding-left: 60px;
+  }
+}

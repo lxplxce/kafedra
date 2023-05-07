@@ -1,3 +1,5 @@
+@import "../mixins";
+
 html,
 body {
 	height: 100%;
@@ -11,7 +13,7 @@ body{
   flex-direction: column;
   min-height: 100vh;
   background-color:$bg_color;
-  // background-image: url('../img/noise.png');
+  // background-image: url("/img/noise.png");
   background-size: auto, 100% auto;
   background-position: 0 0, 0 0;
   background-repeat: repeat, repeat-y;
@@ -23,6 +25,12 @@ body{
   overflow-x: hidden;
   color: $black;
   padding-top: 147px;
+  @include media ($max-w768){
+    padding-top: 111px;
+  }
+  @include media ($max-w768){
+    padding-top: 70px;
+  }
 }
 
 .wrapper {
@@ -55,9 +63,39 @@ img{
   object-fit: cover;
 }
 
-.wrapper{
-  background-image: url("/img/noise.png");
+.page__body{
+  background-image: url("/img/fon1920.png");
 }
+
+input,
+textarea,
+select{
+  box-shadow: none;
+  outline: none;
+  color: $black;
+  font-family: $font1;
+}
+
+textarea{
+  resize: none;
+}
+
+input,
+textarea{
+  &::placeholder{
+    color: $placeholder_grey;
+    transition: color 0.2s;
+  }
+  &:focus{
+    &::placeholder{
+      color: transparent;
+    }
+  }
+}
+
+// td{
+//   border: 1px solid $black_80;
+// }
 
 // html {
 //   box-sizing: border-box;

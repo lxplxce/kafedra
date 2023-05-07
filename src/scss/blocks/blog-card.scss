@@ -1,6 +1,7 @@
 @import "../global/_vars";
 @import "../global/_fonts";
 @import "../global/settings";
+@import "../mixins";
 
 .blog-card{
   box-sizing: border-box;
@@ -92,13 +93,8 @@
     }
   }
   &__icon{
-    position: absolute;
     right: 0;
     bottom: 30px;
-    transition:color 0.2s;
-    display: block;
-    color: $black;
-    transition: none;
   }
   &__text{
     max-width: 467px;

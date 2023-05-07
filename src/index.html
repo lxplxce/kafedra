@@ -4,22 +4,18 @@
 @include('partials/head.html')
 
 <body class="page__body">
-  <div class="site-container">
-
-    <div class="wrapper">
-      @include('partials/page-header.html')
-
-      <main class="main">
-        <div class="home">
-
-          @include('partials/events.html')
-          @include('partials/blog-listing.html',{"class":"home_blog-listing"})
-
-        </div>
-      </main>
-    </div>
-    @include('partials/page-footer.html')
-
+  <div class="wrapper">
+    <main class="main">
+      <div class="home">
+        @include('partials/page-header.html')
+        <!-- @include('partials/lenni-main.html') -->
+        @include('partials/millennials.html')
+        <!-- @include('partials/events.html')
+        @include('partials/blog-listing.html',{"class":"home_blog-listing"}) -->
+      </div>
+    </main>
+    <!-- @include('partials/page-footer.html')
+    @include('partials/pp-form.html') -->
   </div>
 </body>
 

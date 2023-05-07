@@ -17,12 +17,13 @@
 
 //main colors
 $black:#1F1E1E;
-$black_80: #BFBFBF;
+$black_80: #bfbfbf;
 
 $red: #bc3324;
 $red_dark: #A51505;
 
 $bg_color:#DEDEDE;
+$placeholder_grey:#6C6C6C;
 
 
 //fonts
@@ -34,3 +35,22 @@ $font3:'mak', serif;
 
 $font_size:16px;
 $font_size_s:12.8px;
+
+//media
+$max-w320: "(max-width:319px)";
+$min-w320: "(min-width:320px)";
+
+$max-w768: "(max-width:767px)";
+$min-w768: "(min-width:768px)";
+
+$max-w1020: "(max-width:1019px)";
+$min-w1020: "(min-width:1020px)";
+
+$max-w1340: "(max-width:1339px)";
+$min-w1340: "(min-width:1340px)";
+
+$max-w1370: "(max-width:1369px)";
+$min-w1370: "(min-width:1370px)";
+
+$max-w1660: "(max-width:1659px)";
+$min-w1660: "(min-width:1660px)";

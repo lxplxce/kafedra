@@ -1,0 +1,11 @@
+@import "../global/_vars";
+@import "../global/_fonts";
+@import "../global/settings";
+@import "../mixins";
+
+.article{
+  &__container{
+    @extend .container;
+    flex-direction: column;
+  }
+}

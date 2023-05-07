@@ -10,4 +10,40 @@
   padding-left: 40px;
   padding-right: 40px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__listing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__bigbtn{
+    margin-top: 120px;
+  }
+  &__table{
+    width: 100%;
+  }
+}
+
+.events-main{
+  // transform: perspective(200px) rotateX(-2deg) rotateY(-5deg);
+
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  &__listing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__bigbtn{
+    margin-top: 120px;
+  }
 }
