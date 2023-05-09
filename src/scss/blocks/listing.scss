@@ -1,0 +1,74 @@
+@import "../global/_vars";
+@import "../global/settings";
+@import "../mixins";
+
+.listing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @extend .container;
+  z-index: 10;
+
+  &__events-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -30px -120px;
+
+    @include media($max-w1660) {
+      margin: 0 -20px -100px;
+    }
+
+    @include media($max-w1340) {
+      margin: 0 -15px -100px;
+    }
+
+    @include media($max-w1020) {
+      margin: 0 -15px -80px;
+    }
+
+    @include media($max-w768) {
+      justify-content: center;
+      margin: 0 -10px -80px;
+    }
+
+    @include media($max-w650) {
+      margin: 0 0 -60px;
+    }
+  }
+
+  &__event-card {
+    width: calc(33.3333% - 60px);
+    margin: 0 30px 120px;
+
+    @include media($max-w1660) {
+      width: calc(33.3333% - 40px);
+      margin: 0 20px 100px;
+    }
+
+    @include media($max-w1340) {
+      width: calc(33.333% - 30px);
+      margin: 0 15px 100px;
+    }
+
+    @include media($max-w1020) {
+      width: calc(50% - 30px);
+      max-width: 405px;
+      margin: 0 15px 80px;
+    }
+
+    @include media($max-w768) {
+      margin: 0 10px 80px;
+    }
+
+    @include media($max-w650) {
+      width: 100%;
+      min-height: 491px;
+      margin: 0 0 60px;
+    }
+  }
+
+  &__nav {
+    left: 0;
+  }
+}

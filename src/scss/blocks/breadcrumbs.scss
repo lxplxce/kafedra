@@ -1,0 +1,44 @@
+@import "../global/_vars";
+@import "../global/settings";
+@import "../mixins";
+
+.breadcrumbs {
+  @extend .container;
+  padding-top: 40px;
+  @include media($max-w1340) {
+    padding-top: 38px;
+  }
+  @include media($max-w768) {
+    display: none;
+  }
+  &__item {
+    position: relative;
+    text-decoration: none;
+
+    @include media($max-w1340) {
+      font-size: 0.875rem;
+    }
+    &--last {
+      pointer-events: none;
+    }
+    & + .breadcrumbs__item {
+      margin-left: 13px;
+      &::before {
+        content: "/";
+        position: absolute;
+        top: 0;
+        left: -11px;
+      }
+    }
+  }
+  &--product-page {
+    @include media($max-w1660) {
+      padding-top: 76px;
+    }
+    @include media($max-w1340) {
+      .breadcrumbs__item + .breadcrumbs__item {
+        margin-left: 11px;
+      }
+    }
+  }
+}

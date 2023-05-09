@@ -11,7 +11,12 @@
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
-
+  &__events {
+    margin-bottom: 75px !important;
+    @include media($max-w768) {
+      margin-bottom: 65px !important;
+    }
+  }
   @include media($max-w1340) {
     padding-left: 30px;
     padding-right: 30px;

@@ -11,6 +11,9 @@
   @include media($max-w1340) {
     flex-direction: column;
   }
+  @include media($max-w768) {
+    flex-direction: row;
+  }
 
   &__image {
     display: flex;

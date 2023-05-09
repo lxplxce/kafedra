@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
+  @include('partials/head.html')
 
-@include('partials/head.html')
-
-<body class="page__body">
-
-  <div class="site-container">
-    <div class="wrapper">
-      @include('partials/page-header.html')
+  <body class="body">
+    @include('partials/page-header.html')
+    <main class="page-main">
+      <div class="breadcrumbs">
+        <a href="./index.html" class="breadcrumbs__item">Главная</a>
+        <a class="breadcrumbs__item breadcrumbs__item--last">Мероприятия</a>
+      </div>
 
       <div class="events">
-        <div class="events__listing listing">
-          <a href="#" class="events__bigbtn bigbtn">
-            Мероприятия
-          </a>
-          @include('partials/events-list.html')
-          @include('./partials/table.html')
-        </div>
+        @include('partials/event-listing.html', {"class": "events__listing"})
+        @include('partials/table.html', {"class": "events__table"})
+        @include('partials/want.html', {"class": "events__want"})
+        @include('partials/info.html', {"class": "events__info"})
       </div>
-      @include('partials/page-footer.html')
-
-      @include('partials/pp-form.html')
-    </div>
-  </div>
-
-</body>
-
+    </main>
+    @include('partials/page-footer.html', {"class": ""})
+    @include('partials/pp-form.html')
+    <script src="./js/main.js"></script>
+  </body>
 </html>

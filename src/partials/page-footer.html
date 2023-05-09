@@ -1,56 +1,74 @@
-<footer class="footer">
-  <div class="footer__content">
-    <div class="container">
-      <div class="footer__border"></div>
-      <div class="footer__inner">
-        <div class="footer__link-block content">
-          <blockquote class="footer__links">
-            <a href="#" class="footer__link">Календарь мероприятий</a>
-            <a href="#" class="footer__link">Провести мероприятие</a>
-            <a href="#" class="footer__link">Стать арендатором</a>
-            <a href="#" class="footer__link">Наши проекты</a>
-            <a href="#" class="footer__link">Контакты</a>
-          </blockquote>
+<footer class="page-footer @class">
+  <div class="page-footer__container">
+    <div class="page-footer__main">
+      <nav class="page-footer__nav">
+        <a href="#" class="page-footer__nav-link">Календарь мероприятий</a>
+        <a href="#" class="page-footer__nav-link">Провести мероприятие</a>
+        <a href="#" class="page-footer__nav-link">Стать арендатором</a>
+        <a href="#" class="page-footer__nav-link">Наши проекты</a>
+        <a href="#" class="page-footer__nav-link">Контакты</a>
+      </nav>
+      <form method="post" class="page-footer__sub sub">
+        <h5 class="sub__title">Подпишись и будь в курсе происходящего</h5>
+        <div class="sub__container">
+          <input
+            type="email"
+            class="sub__email"
+            placeholder="Email"
+            id="js-subscribeEmail"
+            required
+          />
+          <button type="submit" class="sub__btn btn sub__btn--w135">
+            Подписаться
+          </button>
         </div>
-        <div class="footer__feedback">
-          <span class="footer__txt">
-            Подпишись и будь в курсе происходящего
-          </span>
-          <form class="footer__follow">
-            <input class="footer__input field__input" type="email" placeholder="Email">
-            <button class="footer__btn btn">Подписаться</button>
-          </form>
-          <label class="footer__check check">
-            <input type="checkbox" class="check__input" name="agree" required checked>
-            <span class="check__mark"></span>
-            <span class="check__label check__label--s">Согласен на обработку персональных данных</span>
-          </label>
-        </div>
-      </div>
+        <label class="sub__agree check">
+          <input type="checkbox" name="agree" class="check__input" required />
+          <span class="check__mark"></span>
+          <span class="check__label check__label--fs14"
+            >Согласен на обработку персональных данных</span
+          >
+        </label>
+      </form>
     </div>
-
-    <div class="footer__copyright">
-      <div class="container">
-        <p>© Millennials 2022</p>
-        <div class="footer__bottom">
-          <span class="footer__txt">
-            Политика конфиденциальности
-          </span>
-          <span class="footer__txt footer__cookies">
-            Cookies
-          </span>
-
-          <div class="footer__logo">
-
-          </div>
-          <div class="footer__bottom-right">
-            <span class="footer__txt">
-              Создание и продвижение
-            </span>
-            <img src="./img/tagree.png" alt="tagree" class="footer__tagree-img">
-          </div>
+    <div class="page-footer__bottom-block">
+      <div class="page-footer__left-block">
+        <div class="page-footer__copyright">
+          ©
+          <a
+            href="#"
+            class="page-footer__copyright-link"
+            rel="nofollow"
+            target="_blank"
+            >Millennials</a
+          >
+          2022
+        </div>
+        <div class="page-footer__terms">
+          <a href="#" class="page-footer__privacy"
+            >Политика конфиденциальности</a
+          >
+          <a href="#" class="page-footer__cookies">Cookies</a>
         </div>
       </div>
+      <div class="page-footer__social social">
+        <a href="#" class="social__link" rel="nofollow" target="_blank">
+          <svg class="social__link-icon" width="21" height="24">
+            <use xlink:href="img/sprite.svg#instagram"></use>
+          </svg>
+        </a>
+        <a href="#" class="social__link" rel="nofollow" target="_blank">
+          <svg class="social__link-icon" width="28" height="29">
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </div>
+      <a href="#" class="page-footer__logo" rel="nofollow" target="_blank">
+        <span class="page-footer__logo-text">Создание и продвижение</span>
+        <svg class="page-footer__logo-icon" width="58" height="17">
+          <use xlink:href="img/sprite.svg#tagree"></use>
+        </svg>
+      </a>
     </div>
   </div>
 </footer>

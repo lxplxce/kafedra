@@ -1,0 +1,48 @@
+@import "../global/_vars";
+@import "../global/settings";
+@import "../mixins";
+
+.show-more {
+  margin-top: 70px;
+  @include media($max-w1660) {
+    margin-bottom: 60px;
+  }
+  @include media($max-w600) {
+    margin-bottom: 50px;
+  }
+  z-index: 20;
+  &__link {
+    display: flex;
+    flex-direction: column;
+    max-width: 128px;
+    min-height: 132px;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.2s;
+    @include media($max-w1340) {
+      max-width: 99px;
+      min-height: 106px;
+      font-size: 0.875rem;
+    }
+    &:hover {
+      color: $red_dark;
+      cursor: pointer;
+    }
+    &:active {
+      color: $red_dark;
+      cursor: pointer;
+    }
+  }
+  &__arrow {
+    align-self: center;
+    width: 92px;
+    height: 63px;
+    margin-top: 36px;
+    transform: rotate(90deg);
+    @include media($max-w1340) {
+      margin-top: 32px;
+    }
+  }
+}

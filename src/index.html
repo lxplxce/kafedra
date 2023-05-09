@@ -3,22 +3,22 @@
   @include('partials/head.html')
 
   <body class="body">
-    <div class="wrapper">
-      @include('partials/page-header.html')
+    @include('partials/page-header.html')
 
-      <main class="main">
-        <div class="home">
-          @include('partials/lenni-main.html', {"class": "home__lenni"})
-          @include('partials/want.html', {"class": "home__want"})
-          @include('partials/millennials.html',{"class":"home__millennials"})
-          @include('partials/events.html',{"class":"home__events"})
-          @include('partials/blog-listing.html',{"class":"home__blog-listing"})
-          @include('partials/contacts.html', {"class": "home__contacts"})
-        </div>
-      </main>
-      <!-- @include('partials/page-footer.html')
-    @include('partials/pp-form.html') -->
-    </div>
+    <main class="main">
+      <div class="home">
+        @include('partials/lenni-main.html', {"class": "home__lenni"})
+        @include('partials/want.html', {"class": "home__want"})
+        @include('partials/millennials.html',{"class":"home__millennials"})
+        @include('partials/events.html',{"class":"home__events"})
+        @include('partials/blog-listing.html',{"class":"home__blog-listing"})
+        @include('partials/contacts.html', {"class": "home__contacts"})
+        @include('partials/strange-text.html', {"class": "home__strange-text"})
+      </div>
+    </main>
+    @include('partials/page-footer.html', {"class": "page-index"})
+    @include('partials/pp-form.html')
+
     <script src="https://maps.googleapis.com/maps/api/js?key="></script>
     <script src="./js/main.js"></script>
   </body>

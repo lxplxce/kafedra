@@ -1,0 +1,58 @@
+@import "../global/_vars";
+@import "../global/_fonts";
+@import "../global/settings";
+@import "../mixins";
+
+.strange-text {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 305px;
+  overflow: hidden;
+
+  @include media($max-w1660) {
+    min-height: 216px;
+  }
+
+  @include media($max-w1340) {
+    min-height: 192px;
+  }
+
+  @include media($max-w768) {
+    min-height: 96px;
+  }
+
+  &__text {
+    position: relative;
+    left: -4.2%;
+    width: 116%;
+    margin: 0;
+    font-family: $font3;
+    font-weight: 700;
+    font-size: 8em;
+    line-height: 1.2;
+    text-align: right;
+
+    @include media($max-w1660) {
+      left: -4.7%;
+      font-size: 5.625rem;
+    }
+
+    @include media($max-w1340) {
+      font-size: 5rem;
+      line-height: 1.4;
+    }
+
+    @include media($max-w768) {
+      font-size: 2.5rem;
+    }
+
+    @include media($max-w600) {
+      width: 140%;
+    }
+
+    &::first-line {
+      text-align: left;
+    }
+  }
+}

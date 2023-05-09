@@ -3,15 +3,18 @@
 @import "../global/settings";
 
 .events {
-  box-sizing: border-box;
-  max-width: 1414px;
-  width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend .container;
+
+  padding: 139px 0 150px;
+
+  @include media($max-w1340) {
+    padding: 91px 0 100px;
+  }
+
+  @include media($max-w768) {
+    padding-top: 80px;
+    padding-bottom: 98px;
+  }
   &__listing {
     display: flex;
     flex-direction: column;
@@ -26,14 +29,8 @@
 }
 
 .events-main {
-  box-sizing: border-box;
-  width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend .container;
+
   background-color: rgba(255, 255, 255, 0.6);
   &__listing {
     display: flex;

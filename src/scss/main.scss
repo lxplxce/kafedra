@@ -29,6 +29,9 @@
 @import "./blocks/pp.scss";
 
 @import "./blocks/table.scss";
+@import "./blocks/info.scss";
+@import "./blocks/listing.scss";
+@import "./blocks/show-more.scss";
 
 @import "./blocks/blog-card.scss";
 @import "./blocks/link.scss";
@@ -36,11 +39,15 @@
 @import "./blocks/content.scss";
 
 @import "./blocks/events.scss";
+@import "./blocks/social.scss";
+@import "./blocks/sub.scss";
 
 @import "./blocks/header";
-@import "./blocks/footer";
+@import "./blocks/page-footer.scss";
 @import "./blocks/want.scss";
 @import "./blocks/blog-listing.scss";
 
 @import "./blocks/contacts.scss";
 @import "./blocks/contact-point.scss";
+@import "./blocks/strange-text.scss";
+@import "./blocks/breadcrumbs.scss";

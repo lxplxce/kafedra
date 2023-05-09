@@ -9,8 +9,8 @@
     transition: none;
     height: 61px;
     @include media($max-w768) {
-      width: 67px;
-      height: 40px;
+      width: 67px !important;
+      height: 40px !important;
     }
   }
 

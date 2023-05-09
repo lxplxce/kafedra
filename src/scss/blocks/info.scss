@@ -1,0 +1,73 @@
+@import "../global/_vars";
+@import "../global/settings";
+@import "../mixins";
+
+.info {
+  @extend .container;
+
+  &__cards-listing {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include media($max-w1340) {
+      justify-content: space-around;
+      margin: 0 -27px -50px;
+    }
+    @include media($max-w768) {
+      margin: 0 0 -40px;
+    }
+  }
+  &__card-item {
+    flex-direction: column;
+    max-width: 401px;
+    text-align: center;
+    @include media($max-w1340) {
+      max-width: 280px;
+      width: calc(50% - 54px);
+      margin: 0 27px 50px;
+    }
+    @include media($max-w768) {
+      margin: 0 0 41px;
+    }
+    &:last-child .contact-point__text {
+      @include media($max-w1340) {
+        padding: 0 9px;
+      }
+    }
+    .contact-point__image {
+      margin: 0 auto 40px auto;
+
+      @include media($max-w768) {
+        margin-bottom: 30px;
+      }
+    }
+    .contact-point__info {
+      padding: 0;
+      @include media($max-w768) {
+        text-align: center;
+      }
+    }
+  }
+  & .contact-point__address {
+    @include media($max-w1340) {
+      margin: 0 0 16px;
+    }
+    @include media($max-w768) {
+      margin: 0 0 10px;
+    }
+  }
+  & .contact-point__text {
+    line-height: 1.357;
+    margin-top: 0;
+    @include media($max-w1340) {
+      margin-bottom: 1px;
+      font-size: 0.875rem;
+    }
+    @include media($max-w768) {
+      margin-bottom: 0;
+      padding: 0 28px;
+      font-size: 0.8125rem;
+      line-height: 1.38;
+    }
+  }
+}
