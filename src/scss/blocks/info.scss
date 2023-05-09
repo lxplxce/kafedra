@@ -28,6 +28,7 @@
     }
     @include media($max-w768) {
       margin: 0 0 41px;
+      flex-direction: column !important;
     }
     &:last-child .contact-point__text {
       @include media($max-w1340) {
