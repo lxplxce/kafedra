@@ -1,0 +1,111 @@
+@import "../global/_vars";
+@import "../global/_fonts";
+@import "../global/settings";
+@import "../mixins";
+
+.contact-point {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+
+  @include media($max-w1340) {
+    flex-direction: column;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    margin-right: 54px;
+    background-color: $black;
+
+    @include media($max-w1340) {
+      margin: 0 auto;
+    }
+
+    @include media($max-w768) {
+      width: 65px;
+      height: 65px;
+      margin: 0 30px 0 0;
+    }
+  }
+
+  &__icon {
+    display: block;
+    color: $red;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px 12px 0;
+
+    @include media($max-w1340) {
+      padding: 30px 0 0;
+      text-align: center;
+    }
+
+    @include media($max-w768) {
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  &__address {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    @include media($max-w1340) {
+      font-size: 1.125rem;
+      line-height: 1.36;
+      font-weight: 700;
+    }
+
+    @include media($max-w768) {
+      margin: 0 0 8px;
+      font-size: 0.875rem;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    line-height: 1.37;
+    text-decoration: none;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    @include media($max-w1340) {
+      margin-bottom: 6px;
+    }
+
+    @include media($max-w768) {
+      margin-bottom: 0;
+      line-height: 1.42;
+    }
+
+    &:hover {
+      color: $red_dark;
+    }
+
+    &:active {
+      color: $red_dark;
+    }
+
+    & + .contact-point__text {
+      margin-top: 3px;
+
+      @include media($max-w768) {
+        margin-top: 0;
+      }
+    }
+  }
+}

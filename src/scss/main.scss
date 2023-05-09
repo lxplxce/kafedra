@@ -2,16 +2,20 @@
 @import "./global/vars";
 @import "./global/_fonts";
 @import "_mixins.scss";
+@import "vendor.scss";
 @import "./global/settings";
 
 // @import "../global/_vars";
 // @import "../global/_fonts";
 // @import "../global/settings";
-
+@import "vendor/swiper_theme.scss";
 // подключения компонентов страницы
-
+@import "./blocks/home.scss";
+@import "./blocks/btn.scss";
 
 @import "./blocks/btn.scss";
+@import "./blocks/arrow.scss";
+@import "./blocks/section-title.scss";
 
 @import "./blocks/event-card.scss";
 @import "./blocks/field.scss";
@@ -27,23 +31,16 @@
 @import "./blocks/table.scss";
 
 @import "./blocks/blog-card.scss";
-@import "./blocks/listing.scss";
+@import "./blocks/link.scss";
 @import "./blocks/reserve.scss";
 @import "./blocks/content.scss";
-@import "./blocks/article.scss";
 
-@import "./blocks/event.scss";
 @import "./blocks/events.scss";
-
 
 @import "./blocks/header";
 @import "./blocks/footer";
+@import "./blocks/want.scss";
+@import "./blocks/blog-listing.scss";
 
-
-.listing__events-cards{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -30px;
-}
-
-
+@import "./blocks/contacts.scss";
+@import "./blocks/contact-point.scss";

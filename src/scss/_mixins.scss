@@ -8,18 +8,21 @@
 @import "./mixins/disable-mob-hover";
 @import "./mixins/layout";
 
-@mixin media( $selectors... ){
-  $selector: '';
+@mixin media($selectors...) {
+  $selector: "";
   @each $s in $selectors {
-      @if $selector == '' { $selector: $s; }
-      @else { $selector: $selector + ', ' + $s; }
+    @if $selector == "" {
+      $selector: $s;
+    } @else {
+      $selector: $selector + ", " + $s;
+    }
   }
-  @media #{unquote($selector)}{
-      @content;
+  @media #{unquote($selector)} {
+    @content;
   }
 }
 
-.is-hidden{
+.is-hidden {
   position: absolute !important;
   width: 0 !important;
   height: 0 !important;
@@ -34,48 +37,49 @@
   pointer-events: none !important;
 }
 
-
-.container{
+.container {
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
   max-width: 1414px;
   padding-left: 40px;
   padding-right: 40px;
-  @include media ($max-w1340){
+  @include media($max-w1340) {
     padding-left: 30px;
     padding-right: 30px;
   }
-  @include media ($max-w768){
+  @include media($max-w768) {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-.width_624{
+.width_624 {
   box-sizing: border-box;
   width: 100%;
   max-width: 624px;
-  @include media ($max-w1660){
+  @include media($max-w1660) {
     max-width: 604px;
   }
-  @include media ($max-w1340){
+  @include media($max-w1340) {
     max-width: 566px;
   }
 }
-
-.look{
+.look {
   font-family: $font1;
   font-size: $font_size;
   color: $black;
   line-height: 22px;
   font-weight: 600;
-}
+  transition: color 0.2s;
 
-.arrow-right{
-  position: absolute;
-  transition:color 0.2s;
-  display: block;
-  color: $black;
-  transition: none;
+  &:hover {
+    color: $red_dark;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $red_dark;
+    cursor: pointer;
+  }
 }

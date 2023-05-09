@@ -1,40 +1,113 @@
-<div class="events-main">
-  <a href="#" class="events__bigbtn bigbtn">
-    Мероприятия
-  </a>
-  <div class="events__listing listing">
+<section class="listing @class">
+  <div class="container">
+    <h2 class="listing__title section-title">Мероприятия</h2>
+    <div
+      class="swiper listing__swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-class"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @include('event-card.html',
+                                { "class": "",
+                                "link": "event.html",
+                                "img": "img/events-listing/Nirvana.png",
+                                "alt": "nirvana",
+                                "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
+                                "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал",
+                                "descr-tablet": "",
+                                "time": "07.12.2022 | начало 18.00",
+                                "datetime": "2022-12-07T18:00"}
+                            )
+        </div>
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @include('event-card.html',
+                                { "class": "",
+                                "link": "event.html",
+                                "img": "img/events-listing/stuff.png",
+                                "alt": "stuff",
+                                "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                                "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи",
+                                "descr-tablet": ": как делают игрушки или двигатель автомобиля",
+                                "time": "14.12.2022 | начало 18.30",
+                                "datetime": "2022-12-14T18:30"}
+                            )
+        </div>
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @include('event-card.html',
+                                { "class": "",
+                                "link": "event.html",
+                                "img": "img/events-listing/Sade.png",
+                                "alt": "sade",
+                                "title": "Вечер | The Best of Sade",
+                                "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка",
+                                "descr-tablet": "",
+                                "time": "16.12.2022 | начало 20.00",
+                                "datetime": "2022-12-16T20:00"}
+                            )
+        </div>
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @include('event-card.html',
+                                { "class": "",
+                                "link": "event.html",
+                                "img": "img/events-listing/malevich.png",
+                                "alt": "malewicz",
+                                "title": "Выставка Малевича в Томске",
+                                "descr": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона",
+                                "descr-tablet": "",
+                                "time": "23.12.2022 | начало 20.00",
+                                "datetime": "2022-12-23T20:00"}
+                            )
+          <!-- prettier-ignore -->
+        </div>
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @include('event-card.html',
+                                { "class": "",
+                                "link": "event.html",
+                                "img": "img/events-listing/art.png",
+                                "alt": "tatler",
+                                "title": "Мастер — класс по студийной съемке от Tatler",
+                                "descr": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс",
+                                "descr-tablet": "",
+                                "time": "15.12.2022 | начало 13.00",
+                                "datetime": "2022-12-15T18:30"}
+                            )
+        </div>
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @include('event-card.html',
+                                { "class": "",
+                                "link": "event.html",
+                                "img": "img/events-listing/the hatters.png",
+                                "alt": "the-hatters",
+                                "title": "Повесилимся на славу на концерте The Hatters",
+                                "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко.",
+                                "descr-tablet": "",
+                                "time": "27.12.2022 | начало 10.00",
+                                "datetime": "2022-12-27T10:00"}
+                            )
+        </div>
+      </div>
 
-    <div class="listing__events-cards">
-      @loop('event-card.html',[
-      {
-      "class": "listing__event-card",
-      "img": "img/Nirvana.png",
-      "alt": "Nirvana",
-      "title": "Собираемся и слушаем альбом Nirvana",
-      "descr": "Это третий альбом группы...",
-      "time":"07.12.2022 | начало 18.00",
-      "datetime":"2022-12-07T18:00"
-      },
-      {
-      "class": "listing__event-card",
-      "img": "img/stuff.png",
-      "alt": "stuff",
-      "title": "Есть тема, нужно обсудить с HowStuffWorks",
-      "descr": "Один из самых популярных подкастов в мире...",
-      "time":"14.12.2022 | начало 18.30",
-      "datetime":"2022-12-14T18:30"
-      },
-      {
-      "class": "listing__event-card",
-      "img": "img/Sade.png",
-      "alt": "Sade",
-      "title": "Есть тема, нужно обсудить с HowStuffWorks",
-      "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соу...",
-      "time":"14.12.2022 | начало 18.30",
-      "datetime":"2022-12-14T18:30"
-      }
-      ])
+      <footer class="swiper-footer">
+        <button type="button" class="swiper-arrow-prev arrow arrow--left">
+          <svg class="arrow__svg arrow" width="92" height="62">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </button>
 
+        <div class="swiper-pagination"></div>
+
+        <button type="button" class="swiper-arrow-next arrow">
+          <svg class="arrow__svg arrow" width="92" height="62">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </button>
+      </footer>
     </div>
+    <a href="#" class="look link">Смотреть все</a>
   </div>
-</div>
+</section>

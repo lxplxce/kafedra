@@ -2,40 +2,136 @@
 @import "../global/_fonts";
 @import "../global/settings";
 
-
-.event-card{
+.event-card {
   display: flex;
-  width: 100%;
-  max-width: 405px;
+  width: 405px;
+  max-width: 100%;
   min-width: 280px;
-  margin: 0 30px 120px;
-  width: calc(33.333% - 60px);
-  &__link{
-      display:flex ;
-      flex-direction: column;
-      width: 100%;
-      text-decoration: none;
-  }
-  &__picture{
-      display:block ;
-      position: relative;
-      margin-bottom: 25px;
-      &::before{
-          content: '';
-          width: 100%;
-          display: block;
-          padding-top: 107.16%;
-      }
-  }
-  &__img{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-  &__title{
 
+  &__link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $black;
+    text-decoration: none;
+    transition: color 0.2s, text-decoration-color 0.2s;
+  }
+
+  &__link:hover &__title {
+    color: $red;
+    text-decoration-color: $red;
+  }
+
+  &__link:active &__title {
+    color: $red;
+    text-decoration-color: $red;
+  }
+
+  &__picture {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 0 25px;
+    font-size: 0;
+    text-decoration: none;
+    overflow: hidden;
+
+    @include media($max-w1660) {
+      margin-bottom: 20px;
+    }
+
+    @include media($max-w1340) {
+      margin-bottom: 25px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 107.16%;
+
+      @include media($max-w1660) {
+        padding-top: 110%;
+      }
+
+      @include media($max-w1340) {
+        padding-top: 107%;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 0 0 13px;
+    min-height: 66px;
+    color: $black;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-decoration: underline transparent;
+    transition: color 0.2s, text-decoration-color 0.2s;
+
+    @include media($max-w1660) {
+      margin: 0 0 7px;
+    }
+
+    @include media($max-w1340) {
+      min-height: 56px;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+    }
+
+    @include media($max-w768) {
+      min-height: 50px;
+      margin: 0 0 10px;
+      font-size: $font_size;
+      line-height: 1.375;
+    }
+  }
+
+  &__description {
+    margin: 0 0 auto;
+    font-size: $font_size;
+
+    @include media($max-w768) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__description-tablet {
+    display: none;
+
+    @include media($max-w1340) {
+      display: inline;
+    }
+  }
+
+  &__time {
+    margin: 14px 0 0;
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.357;
+
+    @include media($max-w1660) {
+      margin: 7px 0 0;
+    }
+
+    @include media($max-w1340) {
+      margin: 16px 0 0;
+    }
+
+    @include media($max-w768) {
+      margin: 11px 0 0 0;
+    }
   }
 }

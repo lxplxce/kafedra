@@ -1,0 +1,37 @@
+@import "../global/_vars";
+@import "../global/_fonts";
+@import "../global/settings";
+@import "../mixins";
+
+.blog-listing {
+  &__link {
+    display: block;
+    max-width: 130px;
+    margin-left: auto;
+    padding-top: 85px;
+    text-align: right;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    @include media($max-w1660) {
+      padding-top: 74px;
+    }
+
+    @include media($max-w1340) {
+      padding-top: 55px;
+    }
+
+    @include media($max-w768) {
+      padding-top: 45px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $red_dark;
+    }
+
+    &:active {
+      color: $red_dark;
+    }
+  }
+}

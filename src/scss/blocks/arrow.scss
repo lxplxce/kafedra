@@ -1,0 +1,39 @@
+@import "../global/_vars";
+@import "../mixins";
+
+.arrow {
+  &__svg {
+    transition: color 0.2s;
+    display: block;
+    color: $black;
+    transition: none;
+    height: 61px;
+    @include media($max-w768) {
+      width: 67px;
+      height: 40px;
+    }
+  }
+
+  &:disabled {
+    fill: $black_80;
+  }
+  &,
+  &--left {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: color 0.2s;
+    &:hover {
+      cursor: pointer;
+      color: $red;
+    }
+    &:active {
+      cursor: pointer;
+      color: $red;
+    }
+  }
+
+  &--left {
+    transform: rotate(180deg);
+  }
+}

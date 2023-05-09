@@ -1,23 +1,24 @@
 @import "../global/_vars";
 @import "../global/_fonts";
 @import "../global/settings";
+@import "../mixins";
 
 .page-header {
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 147px;
   background: rgba(222, 222, 222, 0.5);
   z-index: 100;
-  @include media ($max-w1660){
+  @include media($max-w1660) {
     height: 111px;
   }
-  @include media ($max-w768){
+  @include media($max-w768) {
     height: 70px;
   }
 
-  &::before{
+  &::before {
     content: "";
     display: block;
     position: absolute;
@@ -26,88 +27,88 @@
     width: 100%;
     height: 100%;
     background-color: rgba(222, 222, 222, 0.952);
-    @supports (backdrop-filter: blur(20px)){
-          backdrop-filter: blur(20px);
-          background: rgba(222, 222, 222, 0.5);
+    @supports (backdrop-filter: blur(20px)) {
+      backdrop-filter: blur(20px);
+      background: rgba(222, 222, 222, 0.5);
     }
   }
-  &__logo{
+  &__logo {
     flex-shrink: 0;
     width: 202px;
-    height:  147px;
+    height: 147px;
     text-decoration: none;
     font-size: 0;
     z-index: 1;
-    @include media ($max-w1660){
+    @include media($max-w1660) {
       height: 111px;
       width: 151px;
     }
-    @include media ($max-w768){
+    @include media($max-w768) {
       height: 70px;
       width: 96px;
     }
   }
-  &__logo-icon{
-   width: 100%;
-   height: 100%;
+  &__logo-icon {
+    width: 100%;
+    height: 100%;
   }
-  &__nav{
+  &__nav {
     box-sizing: border-box;
     display: flex;
     align-items: baseline;
     margin: 0 auto;
-    @include media ($max-w1020){
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 211px 30px 30px;
-    background-color: $black_80;
-    transition: transform 0.4s;
-    transform:translateX(-100%);
-    overflow-x: hidden;
-    overflow-y: auto;
-      @supports (backdrop-filter: blur(20px)){
+    @include media($max-w1020) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 211px 30px 30px;
+      background-color: $black_80;
+      transition: transform 0.4s;
+      transform: translateX(-100%);
+      overflow-x: hidden;
+      overflow-y: auto;
+      @supports (backdrop-filter: blur(20px)) {
         backdrop-filter: blur(20px);
         background-color: rgba(222, 222, 222, 0.5);
       }
     }
-    @include media ($max-w768){
+    @include media($max-w768) {
       padding: 150px 30px 30px;
     }
-    &.menu--active{
-      transform:translateX(0%);
-      }
-  }
-  &__user-btn{
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  align-items: center;
-  text-align: center;
-  padding: 15px 40px;
-  border: solid 1px $black;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.3;
-  color: $black;
-  background-color: transparent;
-  text-decoration: none;
-  outline: none;
-  transition: color 0.2s, background-color 0.2s;
-    &:hover,
-    &:active{
-        color: white;
-        background-color: $black;
-        @include media ($max-w1020){
-          background-color: transparent;
-        }
+    &.menu--active {
+      transform: translateX(0%);
     }
-    @include media ($max-w1020){
+  }
+  &__user-btn {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    padding: 15px 40px;
+    border: solid 1px $black;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+    color: $black;
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    transition: color 0.2s, background-color 0.2s;
+    &:hover,
+    &:active {
+      color: white;
+      background-color: $black;
+      @include media($max-w1020) {
+        background-color: transparent;
+      }
+    }
+    @include media($max-w1020) {
       display: flex;
       width: 40px;
       height: 40px;
@@ -118,14 +119,14 @@
       font-size: 0;
     }
   }
-  &__user-icon{
+  &__user-icon {
     display: none;
-    @include media ($max-w1020){
+    @include media($max-w1020) {
       display: block;
       margin: auto;
     }
   }
-  &__nav-link{
+  &__nav-link {
     margin: 0 25px;
     font-weight: 600;
     font-size: 18px;
@@ -134,70 +135,95 @@
     text-decoration: none;
     transition: color 0.2s;
 
-    @include media ($max-w1020){
+    @include media($max-w1020) {
       margin: 0 0 40px;
       font-size: 16px;
       line-height: 22px;
     }
-      &:hover{
-        color:$red_dark;
-        }
+    &:hover {
+      color: $red_dark;
     }
-    &:active{
-    color:$red_dark;
-    }
+  }
+  &:active {
+    color: $red_dark;
+  }
 
-  &__container{
-    @extend .container;
+  &__container {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1414px;
+    padding-left: 40px;
+    padding-right: 40px;
     z-index: 1;
     position: relative;
     display: flex;
     align-items: center;
+    @include media($max-w1340) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include media($max-w768) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include media($max-w320) {
+      padding: 0;
+    }
   }
-  &__right-block{
+  &__right-block {
     width: 202px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-      @include media ($max-w1660){
+    @include media($max-w1660) {
       width: 152px;
-      }
-      @include media ($max-w1020){
-        width: auto;
-        margin-left: auto;
-      }
     }
-    &__nav-user{
-      display: none;
-      @include media ($max-w1020){
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-        }
-    }
-    &__nav-user-link{
-      margin-right: 25px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 22px;
-      text-decoration: none;
-    }
-    &__nav-logout{
-      width: 24px;
-      height: 23px;
-      font-size: 0;
+    @include media($max-w1020) {
+      width: auto;
+      margin-left: auto;
     }
   }
+  &__nav-user {
+    display: none;
+    @include media($max-w1020) {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+  }
+  &__nav-user-link {
+    margin-right: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+  }
+  &__nav-logout {
+    width: 24px;
+    height: 23px;
+    font-size: 0;
+  }
+  &__burger {
+    @include media($max-w320) {
+      margin-right: 20px;
+      margin-left: 30px;
+    }
+  }
+}
 
-.burger{
+.burger {
   display: none;
-  @include media ($max-w1020){
+  @include media($max-w1020) {
     @include burger;
     display: block;
     height: 14px;
     width: 26px;
     color: $black;
-    margin-left:52px ;
+    margin-left: 52px;
     width: 18px;
+  }
+  @include media($max-w320) {
+    margin-left: 30px;
   }
 }
