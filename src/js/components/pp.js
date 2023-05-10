@@ -1,12 +1,36 @@
-const close__pp = document.getElementById("pp__close");
+const root = document.documentElement;
 
-const pp = document.getElementById("pp");
-const btn_event = document.getElementById("make_event");
+const eventPP = document.querySelector("#js-eventPP");
 
-close__pp.addEventListener("click", () => {
-  pp.classList.remove("active");
-});
+if (eventPP) {
+  const eventOpenBtn = document.querySelector("#js-eventOpenBtn");
 
-btn_event.addEventListener("click", () => {
-  pp.classList.add("active");
-});
+  const closeEventPP = function (event) {
+    function close() {
+      document.removeEventListener("keyup", closeEventPP);
+      eventPP.removeEventListener("click", closeEventPP);
+
+      root.classList.remove("show-event-popup");
+    }
+
+    switch (event.type) {
+      case "keyup":
+        if (event.key === "Escape" || event.keyCode === 27) close();
+        break;
+      case "click":
+        if (
+          event.target === this ||
+          event.target.classList.contains("js-ppCloseBtn")
+        )
+          close();
+        break;
+    }
+  };
+
+  eventOpenBtn.addEventListener("click", function () {
+    root.classList.add("show-event-popup");
+
+    document.addEventListener("keyup", closeEventPP);
+    eventPP.addEventListener("click", closeEventPP);
+  });
+}

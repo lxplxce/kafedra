@@ -12,9 +12,9 @@
   padding-left: 40px;
   padding-right: 40px;
   &__events {
-    margin-bottom: 75px !important;
+    margin-bottom: 75px;
     @include media($max-w768) {
-      margin-bottom: 65px !important;
+      margin-bottom: 65px;
     }
   }
   @include media($max-w1340) {

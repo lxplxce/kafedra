@@ -1,96 +1,150 @@
 @import "../global/_vars";
-@import "../global/_fonts";
 @import "../global/settings";
+@import "../mixins";
 
-.pp{
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
+.pp {
   position: fixed;
-  background:rgba(28, 27, 27, 0.4);
-  backdrop-filter: blur(25px);
-  z-index: 110;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  transform: translateY(0%) scale(0);
+  z-index: 110;
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  min-width: 1200px;
+  padding: 90px 95px 50px;
+  background-color: $bg_color;
   overflow-y: auto;
-  padding-bottom: 200px;
-  &__block{
-    margin-top: 90px;
-    max-width: 870px;
-    width: 100%;
-    height: 850px;
+
+  @include media($max-w1660) {
+    min-width: 1144px;
+    padding: 90px 98px 50px;
+  }
+
+  @include media($max-w1340) {
+    min-width: 688px;
+    padding: 72px 40px 50px;
+  }
+
+  @include media($max-w768) {
+    min-width: 280px;
+    padding: 80px 20px 50px 20px;
+  }
+
+  @supports (backdrop-filter: blur(50px)) {
+    & {
+      background-color: rgba(28, 27, 27, 0.4);
+      backdrop-filter: blur(50px);
+    }
+  }
+
+  &__wrapper {
     position: relative;
-    padding: 110px 170px 40px;
-    background-color:$bg_color;
-    background-image: url("/img/noise.png");
-    background-size: auto, 100% auto;
-    background-position: 0 0, 0 0;
-    background-repeat: repeat, repeat-y;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1210px;
+    margin: auto;
+    background-color: $bg_color;
+    background-image: url("../img/noise.png");
+    background-position: 0 0;
+    background-size: auto;
+    background-repeat: repeat;
+
+    @include media($max-w1660) {
+      max-width: 1144px;
+    }
+
+    @include media($max-w1340) {
+      max-width: 688px;
+    }
+
+    @include media($max-w768) {
+      max-width: 100%;
+    }
   }
-  &.active{
-    transform: translateY(0) scale(100%);
+
+  &__container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+
+    @include media($max-w768) {
+      padding: 0 20px 33px;
+    }
   }
-  &__close{
+
+  &__sticky-close {
+    position: relative;
+    top: 0;
+    align-self: flex-end;
+    width: 0;
+    height: 0;
+  }
+
+  &__x-btn {
     position: absolute;
     top: -30px;
-    right: -30px;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border: transparent 1px solid;
-    border-radius: 50%;
-    background-color:$black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: 100;
-    &::after,
-    &::before{
-      position: absolute;
-      content: ' ';
-      height: 20px;
-      width: 2px;
-      background-color: #ffffff;
-      border: 0px solid transparent;
-      border-radius: 2px;
+    right: -31px;
+
+    @include media($max-w1340) {
+      right: -3px;
     }
-    &::before{
-      transform: rotate(45deg);
+
+    @include media($max-w768) {
+      top: -17px;
+      right: -18px;
     }
-    &::after{
-      transform: rotate(-45deg);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      cursor: pointer;
     }
   }
-  &__name{
-    position: absolute;
-    top: -40px;
-    left: 100px;
-    width: 395px;
-    height: 60px;
-    padding: 10px 85px;
+
+  &__title {
+    box-sizing: border-box;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    margin: -44px 0 70px -81px;
+    padding: 10px 82px;
+    width: 595px;
+    min-height: 80px;
     background-color: $black;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    text-align:start;
-    font-family: Lora;
     text-transform: uppercase;
-    font-size: 22px;
-  }
-  &__top-part{
-    display: flex;
-  }
-  &__right-top{
-    margin-left: auto;
-  }
-  &__middle-part{
-    display: flex;
-  }
-  &__middle-right{
-    margin-left: auto;
+    font-weight: 400;
+    font-family: $font2;
+    font-size: 1.375rem;
+    line-height: 1.36;
+    color: white;
+    letter-spacing: 0.02em;
+
+    @include media($max-w1660) {
+      margin: -40px 0 70px -51px;
+      padding: 10px 85px;
+    }
+
+    @include media($max-w1340) {
+      width: 465px;
+      margin: -40px 0 70px -27px;
+      padding: 10px 70px 10px 19px;
+    }
+
+    @include media($max-w768) {
+      width: 225px;
+      min-height: 77px;
+      margin: -28px 0 40px -6px;
+      padding: 9px 22px 10px 20px;
+      font-size: 0.875rem;
+    }
   }
 }

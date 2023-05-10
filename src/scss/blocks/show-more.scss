@@ -4,12 +4,6 @@
 
 .show-more {
   margin-top: 70px;
-  @include media($max-w1660) {
-    margin-bottom: 60px;
-  }
-  @include media($max-w600) {
-    margin-bottom: 50px;
-  }
   z-index: 20;
   &__link {
     display: flex;

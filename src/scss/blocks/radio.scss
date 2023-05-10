@@ -1,26 +1,32 @@
 // @import "/src/scss/_mixins";
+@import "../global/_vars";
+@import "../global/settings";
+@import "../mixins";
 
-.radio{
+.radio {
   display: flex;
   flex-direction: column;
   // align-items: center;
-  &__item{
-    box-sizing: border-box;
+  &__item {
     position: relative;
+    box-sizing: border-box;
     display: flex;
-
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 15px;
     min-height: 23px;
-    padding-left: 46px;
+    margin-bottom: 21px;
+    padding-left: 29px;
     color: $black;
     cursor: pointer;
+    @include media($max-w1660) {
+      margin-bottom: 15px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
-  &:last-child{
-    margin-bottom: 0;
-  }
-  &__mark{
+
+  &__mark {
     box-sizing: border-box;
     display: block;
     position: absolute;
@@ -35,18 +41,18 @@
     background-color: transparent;
     transition: background-color 0.2s;
   }
-  &__input{
+  &__input {
     @extend .is-hidden;
-    &:checked{
-      &~.radio__mark{
+    &:checked {
+      & ~ .radio__mark {
         background-color: $black;
       }
     }
   }
-  &__label{
-    margin: 20px;
+  &__label {
+    margin-left: 20px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 1.4;
   }
 }

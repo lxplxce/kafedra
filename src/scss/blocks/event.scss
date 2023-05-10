@@ -1,0 +1,48 @@
+@import "../global/_vars";
+@import "../global/settings";
+@import "../mixins";
+
+.event {
+  padding: 38px 0 150px;
+
+  @include media($max-w1340) {
+    padding: 40px 0 100px;
+  }
+
+  @include media($max-w768) {
+    padding: 80px 0 100px;
+  }
+
+  &__promo {
+    box-sizing: border-box;
+    margin-bottom: 80px;
+
+    @include media($max-w1340) {
+      margin-bottom: 76px;
+    }
+
+    @include media($max-w768) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    @extend .container;
+    margin-bottom: 80px;
+    padding-right: 32%;
+
+    @include media($max-w1340) {
+      margin-bottom: 54px;
+      padding-right: 25%;
+    }
+
+    @include media($max-w1020) {
+      padding-right: 15%;
+    }
+
+    @include media($max-w768) {
+      margin-bottom: 40px;
+    }
+  }
+}

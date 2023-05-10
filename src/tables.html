@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <!-- @@include('blocks/head.html') -->
+  @include('partials/head.html')
 
   <body class="body">
-    <!-- @@include('blocks/page-header.html') -->
+    @include('partials/page-header.html')
     <main class="page-main">
-      <!-- Здесь будут хлебные крошки -->
       <div class="breadcrumbs breadcrumbs--product-page">
         <a href="./index.html" class="breadcrumbs__item">Главная</a>
         <a href="./events.html" class="breadcrumbs__item">Мероприятия</a>
@@ -15,26 +14,19 @@
       </div>
       <article class="event">
         <h1 class="event__title is-hidden">Страница мероприятия</h1>
-        <!-- Здесь пропущенное содержимое страницы -->
-        <!-- @@include('blocks/event-promo.html', {
+        <!-- prettier-ignore -->
+        @include('partials/event-promo.html', {
       "class": "event__promo",
       "title": "Вечер | The Best of Sade",
       "datetime": "2022-12-16T20:00",
       "date": "16/12/2022",
       "place": "Кафе «Птичка»",
-      "img": "/assets/images/event-promo/event.jpg",
-      "img-2x": "/assets/images/event-promo/event@2x.jpg",
-      "img-webp": "/assets/images/event-promo/event.webp",
-      "img-webp-2x": "/assets/images/event-promo/event@2x.webp",
-      "img-tablet": "/assets/images/event-promo/event_768.jpg",
-      "img-tablet-2x": "/assets/images/event-promo/event_768@2x.jpg",
-      "img-tablet-webp": "/assets/images/event-promo/event_768.webp",
-      "img-tablet-webp-2x": "/assets/images/event-promo/event_768@2x.webp",
+      "img": "/img/event.jpg",
       "alt": "Вечер | The Best of Sade",
       "time": "20.00",
       "address": "Ленина 10 | 2 этаж",
       })
-      @@include('blocks/event-content.html', {"class": "event__content"}) -->
+      @include('partials/event-content.html', {"class": "event__content"})
 
         <form class="reserve event__reserve">
           <div class="reserve__checks reserve__checks--wrapper">
@@ -483,11 +475,8 @@
         </form>
       </article>
     </main>
-    <!-- @@include('blocks/page-footer.html', {"class": "page-event"}) -->
-    <!-- @@include('blocks/event-pp.html') -->
-    <!-- <script src="./scripts/jquery-3.6.0.min.js"></script>
-  <script src="./scripts/jquery.validate.js"></script>
-  <script src="./scripts/jquery.validate-init.js"></script> -->
+    @include('partials/page-footer.html', {"class": "page-event"})
+
     <script src="./scripts/main.js"></script>
   </body>
 </html>
