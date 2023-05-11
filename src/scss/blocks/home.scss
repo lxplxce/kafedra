@@ -37,18 +37,18 @@
     position: relative;
     z-index: 10;
     max-width: 100%;
-    margin-bottom: 65px;
+    margin-bottom: 65px !important;
     padding: 120px 0 100px;
     @include media($max-w1660) {
-      margin-bottom: 71px;
+      margin-bottom: 71px !important;
       padding: 100px 0 92px;
     }
     @include media($max-w1340) {
-      margin-bottom: 35px;
+      margin-bottom: 35px !important;
       padding: 80px 0 58px;
     }
     @include media($max-w768) {
-      margin-bottom: 41px;
+      margin-bottom: 41px !important;
       padding: 38px 0 54px;
     }
     &::before {
@@ -117,7 +117,8 @@
       margin-bottom: 73px;
     }
 
-    @include media($max-w768) {
+    @include media($max-w800) {
+      // margin-top: 35px;
       margin-bottom: 75px;
     }
   }

@@ -20,13 +20,12 @@
       min-height: 106px;
       font-size: 0.875rem;
     }
-    &:hover {
-      color: $red_dark;
-      cursor: pointer;
-    }
+    &:hover,
     &:active {
-      color: $red_dark;
-      cursor: pointer;
+      .show-more__arrow {
+        color: $red_dark;
+        cursor: pointer;
+      }
     }
   }
   &__arrow {

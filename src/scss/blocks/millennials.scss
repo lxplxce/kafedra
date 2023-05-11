@@ -39,7 +39,7 @@
     @include media($max-w1170) {
       grid-template-columns: calc(100% - 315px) 315px;
     }
-    @include media($max-w768) {
+    @include media($max-w800) {
       grid-template-columns: calc(100% - 262px) 262px;
     }
     @include media($max-w650) {
@@ -184,7 +184,8 @@
       font-size: 1.625rem;
       line-height: 1.35;
     }
-    @include media($max-w768) {
+    @include media($max-w800) {
+      font-size: 26px;
       padding-bottom: 30px;
       padding: 28px 27px 30px 0;
       margin-bottom: 0;
@@ -219,7 +220,7 @@
       font-size: 16px;
       line-height: 1.375;
     }
-    @include media($max-w768) {
+    @include media($max-w800) {
       margin-bottom: 50px;
       padding: 0;
       padding-left: 14.9%;
@@ -240,7 +241,7 @@
       margin-bottom: 52px;
       max-width: 315px;
     }
-    @include media($max-w768) {
+    @include media($max-w800) {
       margin-bottom: 50px;
       max-width: 262px;
     }
@@ -308,6 +309,13 @@
     margin-bottom: 89px;
     max-width: 344px;
     width: 100%;
+    @include media($max-w1020) {
+      margin-bottom: 0;
+    }
+    @include media($max-w800) {
+      max-width: 281px;
+      font-size: 16px;
+    }
     @include media($max-w650) {
       max-width: fit-content;
     }
@@ -406,9 +414,11 @@
       justify-self: auto;
       padding-left: 11%;
     }
+    @include media($max-w800) {
+      padding: 0;
+    }
     @include media($max-w650) {
       display: grid;
-      padding: 0;
     }
   }
   &__arrow-right {
@@ -422,15 +432,22 @@
     display: flex;
     align-items: center;
     transition: color 0.2s;
+    transition: none;
     max-width: 344px;
     width: 100%;
     height: 60px;
-    &:hover {
-      color: $red;
+    &:hover,
+    &:active {
+      .millennials__arrow-right {
+        color: $red_dark;
+      }
     }
     @include media($max-w1170) {
       max-width: 262px;
       margin-left: 20%;
+    }
+    @include media($max-w800) {
+      margin-top: auto;
     }
     @include media($max-w650) {
       margin-left: 0;

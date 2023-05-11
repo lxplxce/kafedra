@@ -142,10 +142,6 @@
     @include media($max-w1660) {
       bottom: 28px;
     }
-    @include media($max-w1340) {
-      width: 67px;
-      height: 40px;
-    }
     @include media($max-w1020) {
       right: -3px;
       bottom: -3px;
