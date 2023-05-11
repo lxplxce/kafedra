@@ -6,14 +6,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  @extend .container;
   z-index: 10;
 
   &__events-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 -30px -120px;
+    margin: 0 -40px -120px;
 
     @include media($max-w1660) {
       margin: 0 -20px -100px;

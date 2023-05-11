@@ -4,7 +4,6 @@
 
 .events {
   @extend .container;
-
   padding: 139px 0 150px;
 
   @include media($max-w1340) {
